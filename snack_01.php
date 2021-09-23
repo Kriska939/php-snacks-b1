@@ -5,10 +5,10 @@ Creare una funzione che restituisce un array con 15 numeri casuali, tenendo cont
 
 $randomArray = [];
 
-function randomNumber($array){
 for ($i = 0; $i < 10; $i++) {
-   return $array[] = rand(1,10);
-}
+     $randomNumber = rand(1,10);
+
+     array_push($randomArray, $randomNumber);
 };
 ?>
 
@@ -21,6 +21,12 @@ for ($i = 0; $i < 10; $i++) {
     <title>Snack 1</title>
 </head>
 <body>
-    <p><?= randomNumber($randomArray);?></p>
+    <p> Array di valori randomici:
+<?php
+ foreach ($randomArray as $n) {
+    echo $n, "\n";
+}
+?>
+    </p>
 </body>
 </html>
