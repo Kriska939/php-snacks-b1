@@ -8,7 +8,14 @@ $randomArray = [];
 for ($i = 0; $i < 10; $i++) {
      $randomNumber = rand(1,10);
 
-     array_push($randomArray, $randomNumber);
+
+     // check per la ripetizione dei numeri. SE il numero è già presente, niente push e si richiede un altro numero random: 
+     
+     if(!in_array($randomNumber, $randomArray)){
+     array_push($randomArray, $randomNumber);}
+     else {
+         $i--;
+     };
 };
 ?>
 
